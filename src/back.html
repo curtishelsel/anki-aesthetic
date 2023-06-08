@@ -17,10 +17,10 @@
                                                                                    
   tags.forEach((tag) => {                                                          
     if (tag.includes('::')){                                                       
-      newHtml += ` ${tag.substring(tag.lastIndexOf('::') + 2)}`;                   
+      newHtml += ` ${tag.substring(tag.lastIndexOf('::') + 2).replaceAll('_', ' ')}`;
     } else {                                                                       
       newHtml += ` `;                                                              
-      newHtml += tag;                                                              
+      newHtml += tag.replaceAll('_', ' ');
     }                                                                              
   });                                                                              
                                                                                    
