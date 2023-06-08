@@ -1,0 +1,28 @@
+<div id="card-container">
+  <div class="tag-container">
+    {{#Tags}}
+      <span id="tags">{{Tags}}</span>
+    {{/Tags}}
+  </div>
+  {{cloze:Text}}
+</div>
+
+<script>{
+  const tagEl = document.querySelector('#tags');
+  const tags = tagEl.innerHTML.split(' ');
+
+  let newHtml = '';
+
+  tags.forEach((tag) => {
+    if (tag.includes('::')){
+      newHtml += ` ${tag.substring(tag.lastIndexOf('::') + 2)}`;
+    } else {
+      newHtml += ` `;
+      netHtml += tag;
+    }
+  });
+
+  tagEl.innerHTML = newHtml;
+
+}
+</script>
