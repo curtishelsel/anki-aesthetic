@@ -1,91 +1,100 @@
-html {
-  overflow: scroll;
-  overflow-x: hidden;
-}                                  
-                                 
-#card-container {                                                                         
-    padding: 0px 0px;                                                           
-    max-width: 700px; 
-    margin: 0 auto; 
-    word-wrap: break-word; 
+html {                                                                          
+  overflow: scroll;                                                             
+  overflow-x: hidden;                                                           
+}
+
+:root{
+  --font: Inter, Menlo, baskerville, sans;
+  --border-radius: 0.8em;
+} 
+                                                                             
+                                                                                
+#card-container {                                                               
+  padding: 0px 0px;                                                           
+  max-width: 700px;                                                           
+  margin: 0 auto;                                                             
+  word-wrap: break-word;                                                      
 }                                                                               
                                                                                 
 .card {                                                                         
-    font-family: Menlo, baskerville, sans;                                      
-    font-size: 18px; 
-    text-align: center;
-    color: #D7DEE9;
-    line-height: 1.6em;                                                         
-    background-color: #333B45; 
+  font-family: var(--font);                                      
+  font-size: 18px;                                                            
+  text-align: center;                                                         
+  color: #D7DEE9;                                                             
+  line-height: 1.6em;                                                         
+  background-color: #333B45;                                                  
 }                                                                               
-
-.cloze, .cloze b, .cloze u, .cloze i { 
-  font-weight: bold;
-  color: MediumSeaGreen !important;
-}
                                                                                 
-#extra, #extra i {
-  font-size: 15px;
-  color:#D7DEE9;
-  font-style: italic;
-}  
-
-.tag-container {                                                                         
-    color: #A6ABB9;                                                             
-    opacity: 0;                                                                 
-    font-size: 10px;                                                            
-    width: 100%;                                                                
-    text-align: center;                                                         
-    text-transform: uppercase;                                                  
-    position: fixed;                                                            
-    padding: 0;                                                                 
-    top:0;                                                                      
-    right: 0;
-}                                                                  
-
-.tag-container:hover {
-  opacity: 1;
-  position: fixed;
-}                                     
-                                                                                
-img {
-  display: block;
-  max-width: 100%;
-  max-height: none;
-  margin-left: auto;
+.cloze, .cloze b, .cloze u, .cloze i {                                          
+  font-weight: bold;                                                            
+  color: MediumSeaGreen !important;                                             
+}                                                                               
+                                                                                   
+#extra, #extra i {                                                                 
+  font-size: 15px;                                                                 
+  color:#D7DEE9;                                                                   
+  font-style: italic;                                                              
+}                                                                                  
+                                                                                   
+.tag-container {                                                                    
+  color: #A6ABB9;                                                                
+  opacity: 0;                                                                    
+  font-size: 10px;                                                               
+  width: 100%;                                                                   
+  text-align: center;                                                            
+  text-transform: uppercase;                                                     
+  position: fixed;                                                               
+  padding: 0;                                                                    
+  top:0;                                                                         
+  right: 0;                                                                      
+}                                                                                  
+                                                                                   
+.tag-container:hover {                                                             
+  opacity: 1;                                                                      
+  position: fixed;                                                                 
+}                                                                                  
+                                                                                   
+img {                                                                              
+  display: block;                                                                  
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;                                                               
   margin: 10px auto 10px auto;
-}
+  border-radius: var(--border-radius)                                                     
+}                                                                                  
+                                                                                   
+tr {                                                                               
+  font-size: 12px;                                                                 
+}                                                                                  
+                                                                                   
+b {                                                                                
+  color: #C695C6 !important;                                                       
+}                                                                                  
+                                                                                   
+u {                                                                                
+  text-decoration: none;                                                           
+  color: #5EB3B3;                                                                  
+}                                                                                  
+                                                                                   
+i {                                                                                
+  color: IndianRed;                                                                
+} 
 
-tr {
-  font-size: 12px;
-}                                                          
+a {                                                                             
+  color: LightGray !important;                                                  
+  text-decoration: none;                                                        
+  font-size: 10px;                                                              
+  font-style: normal;                                                           
+}                                                                               
                                                                                 
-b {
-  color: #C695C6 !important;
-} 
-
-u {
-  text-decoration: none;
-  color: #5EB3B3;
-}
-
-i {
-  color: IndianRed;
-} 
-
-a {
-  color: LightGray !important;
-  text-decoration: none;
-  font-size: 10px;
-  font-style: normal;
-} 
+.mobile .card {                                                                 
+  color: #D7DEE9;                                                               
+  background-color: #333B45;                                                    
+}                                                                               
                                                                                 
-.mobile .card {
-  color: #D7DEE9;
-  background-color: #333B45;
-}                    
+.mobile .tag-container:hover {                                                           
+  opacity: 1;                                                                   
+  position: relative;                                                           
+}                                                  
 
-.mobile .tags:hover {
-  opacity: 1;
-  position: relative;
-}                          
